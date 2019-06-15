@@ -1,0 +1,9 @@
+server:
+  port: 9002
+
+spring:  application:    name: config-server
+  cloud:    config:      server:        git:          uri: https://github.com/litongye01/test_02.git
+          #username: 因为本示例使用的是public的git库，所以不需要用户名与密码
+          #password: 
+eureka:  client:    service-url:      defaultZone: http://localhost:9000/eureka/
+          

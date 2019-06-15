@@ -1,0 +1,9 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+spring:  cloud:    config:
+      discovery:        enabled: true              # 是否启用服务发现功能
+        service-id: config-server  # 需要发现的Config Server的服务名      name: common-config          # 配置文件名，如果不设置默认为当前应用的名称
+      label: master                # Git中的分支，可以省略，如果省略默认为master
+      profile: dev                 # 设置环境
